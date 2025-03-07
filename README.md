@@ -1,4 +1,5 @@
 "# Ten-Programs-Batch-2" 
+
 Prog01: Create a program that ask user to input 2 numbers. Print the smaller number.
 
 Prog02: Create a program that ask user to input 2 numbers. Print "Not Equal" when the numbers are not the same.

@@ -1,7 +1,20 @@
 
 # MAIN LOOP===================================================================================
 # Function list-------------------------------------------------------------------------------
+# > Seperated into two, with one containing the names of the function, the second one contains the function-
+function_names = ['Prog 1: Print the smaller of 2 numbers',
+                  'Prog 2: Check if 2 numbers are not equal',
+                  'Prog 3: Difference of 2 Numbers:',
+                  'Prog 4: Quotient of 2 Numbers without the decimal',
+                  'Prog 5: Quotient of 2 Numbers',
+                  'Prog 6: First Number raised to the Second',
+                  'Prog 7: Summation of 10 Numbers',
+                  'Prog 8: Odd number counter',
+                  'Prog 9: All even numbers from 0 - 100',
+                  'Program 10: All numbers from 0-100 except those ending in zero']
 
+function_list = [greater_number, compare_ab, sum_ab, product_ab, quotient_ab, exponent_ab, summate, odd_numbers,
+                 all_even, no_zero]
 
 # Selection: part where the user selects a program to play------------------------------------
 while True:

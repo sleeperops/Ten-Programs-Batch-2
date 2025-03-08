@@ -123,7 +123,7 @@ while True:
         continue
 # executes the selected function----------------------------------------------------------------
     user_input -= 1  # to deal with 0 base
-    if user_input >= 0 and user_input < 6:  # for functions with special parameters
+    if user_input in range(0,5):  # for functions with special parameters ! index(0-5) is programs(1-5) (6 is excluded)
         try:
             first_input = int(input('Enter the first number: '))
             second_input = int(input('Enter the second number: '))
@@ -133,8 +133,8 @@ while True:
             continue
         print(f'Answer: {function_list[user_input](first_input, second_input)}')  # calls the function based on user input
 
-    elif user_input > 5 and user_input <= 10:  # for functions with no special parameters
-        function_list[user_input]()  # calls the function based on user input
+    elif user_input in range(5,11):  # for functions with no special parameters ! index(5,11) is program(6-10) (11 is exluded)
+        function_list[user_input]()  # calls the function without input from user
 
 # exit / continue program-------------------------------------------------------------------------
     # exit / continue program

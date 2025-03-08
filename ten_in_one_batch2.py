@@ -87,14 +87,15 @@ function_names = ['Prog 1: Print the smaller of 2 numbers',
                   'Prog 2: Check if 2 numbers are not equal',
                   'Prog 3: Difference of 2 Numbers:',
                   'Prog 4: Quotient of 2 Numbers without the decimal',
-                  'Prog 5: Quotient of 2 Numbers',
-                  'Prog 6: First Number raised to the Second',
-                  'Prog 7: Summation of 10 Numbers',
-                  'Prog 8: Odd number counter',
-                  'Prog 9: All even numbers from 0 - 100',
-                  'Program 10: All numbers from 0-100 except those ending in zero']
+                  'Prog 5: Remainder of 2 numbers when divided',
+                  'Prog 6: Ask for 10 numbers. Subtract the remaining 9 numbers to the first',
+                  'Prog 7: Counts the amount of even numbers in a set of inputs',
+                  'Prog 8: Prints all odd numbers from 0 - 100',
+                  'Prog 9: Prints all numbers from 0 - 100 except those ending in 0 or 5',
+                  'Program 10: Prints all the numbers in between 2 given numbers'] #( ! program(1-10) is (0-9) in index)
 
-function_list = []
+function_list = [smaller_number, not_equal, difference, quotient_no_dec,remainder_of,
+                 difference_ten_numbers, even_number_count, odd_numbers, no_zero_and_five, in_between]
 
 # Selection: part where the user selects a program to play------------------------------------
 # Displays the function itself----

@@ -12,6 +12,6 @@ def not_equal(input_1, input_2):
     if input_1 != input_2:
         return 'Not Equal'
     else:
-        print('equal')
+        return 'equal'
 
 print(not_equal(first_input, second_input))

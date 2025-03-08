@@ -1,3 +1,84 @@
+def smaller_number(first_input, second_input):
+    if first_input < second_input:
+        return first_input
+    elif second_input < first_input:
+        return second_input
+    else:
+        return 'equal'
+
+def not_equal(first_input, second_input):
+    if first_input != second_input:
+        return 'Not Equal'
+    else:
+        return 'Equal'
+
+def difference(first_input, second_input):
+    return first_input - second_input
+
+def quotient_no_dec(first_input, second_input):
+    return f'{first_input//second_input}'
+
+def remainder_of(first_input,second_input):
+    return first_input % second_input
+
+def difference_ten_numbers():
+    total = 0
+    counter = 9  # countdown, for auxillary purposes
+    first_input = int(input('Input the first number as the minuend (10): ')) # to divide the other numbers to
+    for _ in range(9):
+        number = int(input(f'Input the rest as a subtrahend ({counter}): '))
+        total += number
+        counter -= 1 # countdown, for auxillary purposes
+    print(first_input - total)
+
+def even_number_count():
+    total_even = 0
+    counter = 10  # countdown, for auxillary purposes
+    for _ in range(10):
+        number = int(input(f'Input a number ({counter}): '))
+        if number % 2 == 0:
+            total_even += 1      
+        
+        counter -= 1 # countdown, for auxillary purposes
+    print(f'Answer: {total_even}')
+
+def odd_numbers():
+    counter = 0
+    while counter != 100:
+        counter += 1
+        if counter % 2 == 1:
+            print(counter, end = ' ')
+def no_zero_and_five():
+    for num in range(100):
+        if num % 5 == 0 or num % 10 == 0:
+            continue
+        else:
+            print(num, end = ' ')
+
+def in_between():
+    first_input = input('Enter the first number: ')
+    second_input = input('Enter the second number: ')
+
+    try:
+        first_input = int(first_input)
+        second_input = int(second_input)
+    except:
+        print('>>Not a number')
+    # ===============================================
+
+    if first_input < second_input: # if first input is smaller, make it as the minimum value
+        floor_num = first_input
+        ceiling_num = second_input
+    elif first_input > second_input: # if first input is larger, make it as the maximum value
+        ceiling_num = first_input
+        floor_num = second_input
+    else:
+        floor_num = first_input
+        ceiling_num = second_input    
+
+    print(f'Numbers in between {floor_num} and {ceiling_num} are: ')
+    for numbers_in_between in range(floor_num + 1, ceiling_num): # numbers between the first input and the second
+        print(numbers_in_between, end = ' ')
 
 # MAIN LOOP===================================================================================
 # Function list-------------------------------------------------------------------------------
@@ -36,9 +117,9 @@ while True:
         continue
       
     # checks if the selected function is in range---
-    if user_input > len(function_list) or user_input < len(function_list):
+    if user_input > len(function_list) or user_input < 1:
         print('>>No such option')
-      
+        continue
 # executes the selected function----------------------------------------------------------------
     user_input -= 1  # to deal with 0 base
     if user_input >= 0 and user_input < 6:  # for functions with special parameters

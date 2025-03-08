@@ -80,6 +80,10 @@ def in_between():
     for numbers_in_between in range(floor_num + 1, ceiling_num): # numbers between the first input and the second
         print(numbers_in_between, end = ' ')
 
+# >>>>>>>>>>>>>>>>>Handle out of index !!!
+
+
+
 # MAIN LOOP===================================================================================
 # Function list-------------------------------------------------------------------------------
 # > Seperated into two, with one containing the names of the function, the second one contains the function-
@@ -102,25 +106,21 @@ function_list = [smaller_number, not_equal, difference, quotient_no_dec,remainde
 while True:
     for function in function_names:  # displays all the function
         print(function)
-# Error handling------------------------------------------------------------------------------
-    print('') # space
+#Function selection----------------
+    print('')
     user_input = input('Pick the number of the program of your choice (// to exit): ')
-  
-    # exits the program---
-    if user_input == '//':
+    if user_input == '//':  # exit program
         break
-      
-    # check if input is a number --- 
     try:
         user_input = int(user_input)
     except:
-        print('>>Not a number')
         continue
-      
-    # checks if the selected function is in range---
+        print('>>Not a number')
+        
     if user_input > len(function_list) or user_input < 1:
         print('>>No such option')
         continue
+         
 # executes the selected function----------------------------------------------------------------
     user_input -= 1  # to deal with 0 base
     if user_input in range(0,5):  # for functions with special parameters ! index(0-5) is programs(1-5) (6 is excluded)
@@ -135,13 +135,13 @@ while True:
 
     elif user_input in range(5,11):  # for functions with no special parameters ! index(5,11) is program(6-10) (11 is exluded)
         function_list[user_input]()  # calls the function without input from user
-
+        
 # exit / continue program-------------------------------------------------------------------------
-    # exit / continue program
     to_continue = input("Continue? (any key or 'n' to exit): ")
     if to_continue.lower() == 'n':
         break
     else:
         continue
+
 
 

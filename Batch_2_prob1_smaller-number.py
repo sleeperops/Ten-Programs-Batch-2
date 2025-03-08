@@ -14,6 +14,6 @@ def smaller_number(first_num, second_num):
     elif second_num < first_num:
         return second_num
     else:
-        print(equal)
+        return 'equal'
 
 print(smaller_number(first_input, second_input))

@@ -20,21 +20,28 @@ function_list = []
 while True:
     for function in function_names:  # displays all the function
         print(function)
-#Function selection----------------
+# Error handling------------------------------------------------------------------------------
     print('') # space
     user_input = input('Pick the number of the program of your choice (// to exit): ')
-    if user_input == '//':  # exit program
+  
+    # exits the program---
+    if user_input == '//':
         break
+      
+    # check if input is a number --- 
     try:
         user_input = int(user_input)
     except:
         print('>>Not a number')
         continue
+      
+    # checks if the selected function is in range---
+    if user_input > len(function_list) or user_input < len(function_list):
+        print('>>No such option')
+      
 # executes the selected function----------------------------------------------------------------
     user_input -= 1  # to deal with 0 base
     if user_input >= 0 and user_input < 6:  # for functions with special parameters
-        first_input = input('Enter the first number: ')
-        second_input = input('Enter the second number: ')
         try:
             first_input = int(input('Enter the first number: '))
             second_input = int(input('Enter the second number: '))
@@ -47,8 +54,6 @@ while True:
     elif user_input > 5 and user_input <= 10:  # for functions with no special parameters
         function_list[user_input]()  # calls the function based on user input
 
-    else: # error in input
-        print('>>Out of index')
 # exit / continue program-------------------------------------------------------------------------
     # exit / continue program
     to_continue = input("Continue? (any key or 'n' to exit): ")
